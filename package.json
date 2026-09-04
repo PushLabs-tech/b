@@ -1,0 +1,1 @@
+{"name":"builder-grand-finale","private":true,"type":"module","scripts":{"dev":"vite --host 0.0.0.0","check":"node scripts/smoke-test.mjs"},"devDependencies":{"vite":"^7.0.0"}}

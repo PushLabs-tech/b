@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Builder — Universal Creation Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="logo">B</div><div><b>Builder</b><span>Universal creation engine</span></div><button class="icon mobile-close" data-action="toggleSidebar">×</button></div>
+    <button class="new-project" data-action="newProject"><span>＋</span>New project<kbd>N</kbd></button>
+    <nav class="nav">
+      <button class="nav-item active" data-view="home"><span>⌂</span>Home</button>
+      <button class="nav-item" data-view="projects"><span>▦</span>Projects</button>
+      <button class="nav-item" data-view="templates"><span>◇</span>Templates</button>
+      <button class="nav-item" data-view="activity"><span>◷</span>Activity</button>
+    </nav>
+    <div class="label">WORKSPACE</div>
+    <nav class="nav">
+      <button class="nav-item" data-view="research"><span>⌕</span>Research</button>
+      <button class="nav-item" data-view="integrations"><span>⊕</span>Integrations</button>
+      <button class="nav-item" data-view="agents"><span>✦</span>Agents</button>
+    </nav>
+    <div class="label">RECENT</div><div id="recent" class="recent"></div>
+    <div class="sidebar-bottom">
+      <div class="usage"><div class="usage-head"><b>Usage</b><button class="text-link" data-view="settings">Manage</button></div>
+        <div class="usage-line"><span><i class="dot build"></i>Build</span><b id="buildCredits">50</b></div><div class="bar"><span id="buildBar"></span></div>
+        <div class="usage-line"><span><i class="dot integration"></i>Integration</span><b id="integrationCredits">200</b></div><div class="bar"><span id="integrationBar"></span></div>
+      </div>
+      <button class="account" data-view="settings"><div class="avatar">PS</div><div><b>Workspace owner</b><span>Free preview</span></div><strong>›</strong></button>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="left"><button class="icon mobile-open" data-action="toggleSidebar">☰</button><div id="crumbs"><span>Builder</span><em>/</em><b>Home</b></div></div><div class="right"><button class="top-btn" data-action="command">⌘ K</button><button class="top-btn" data-action="search">Search</button><div class="avatar">PS</div></div></header>
+    <section id="root" class="root"></section>
+  </main>
+</div>
+<div id="modal"></div><div id="toast"></div>
+<script src="config.js" onerror="void 0"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</body></html>
